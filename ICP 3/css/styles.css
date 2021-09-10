@@ -1,0 +1,15 @@
+body {
+    background-image: url("../RPS_Event.jpg");
+    background-size: cover;
+}
+#content {
+    margin-top: 39%;
+    margin-left: 60%;
+}
+h2{
+    color: lawngreen;
+}
+img {
+    height: 100px;
+    width: 60px;
+}

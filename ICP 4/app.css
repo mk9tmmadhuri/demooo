@@ -1,0 +1,55 @@
+body {
+    margin-top: 5%;
+    background: transparent;
+}
+#todo {
+    margin-left: 1px;
+    padding-top: 30px;
+    border-radius: 20px;
+    border: 2px dashed lightskyblue;
+    width: 100%;
+    color: lightgreen;
+}
+::placeholder {
+    color: white;
+}
+
+span {
+    background: lightgrey;
+}
+
+#addItem {
+    background: lightgray;
+}
+
+.bt {
+    background-color: lightgreen;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.bt2 {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.bt2:hover {
+    background-color: darkred;
+}
+/* Darker background on mouse-over */
+.bt:hover {
+    background-color: green;
+}
+
+
+table, th, td {
+    border: none;
+}
+th, td {
+    font-size: large;
+}

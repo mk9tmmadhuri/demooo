@@ -8,9 +8,8 @@ import {DataSource} from '@angular/cdk/collections';
   styleUrls: ['./book.component.css']
 })
 export class BookComponent implements OnInit {
-
   books: any;
-  displayedColumns = ['isbn', 'title', 'author', 'published Year'];
+  displayedColumns = ['title', 'author', 'published_year', 'isbn'];
   dataSource = new BookDataSource(this.api);
 
   constructor(private api: ApiService) {
@@ -37,6 +36,5 @@ export class BookDataSource extends DataSource<any> {
   }
 
   disconnect() {
-
   }
 }

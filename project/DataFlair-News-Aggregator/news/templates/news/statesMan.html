@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Trusted News Tribune</title>
+
+  <!-- CSS  -->
+  <!-- CSS only -->
+  {% load static %}
+  <script src="{% static 'common.js' %}"></script>   
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Poppins:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <style>
+	  .title-news{
+		font-family: 'Mochiy Pop P One', sans-serif;
+	  }
+	  @media screen and (min-width: 480px) {
+		.main-row{
+			padding-left: 200px; padding-right:200px
+		}
+		.card-size{
+			height: 300px;
+		}
+	  }
+  </style>
+</head>
+<body style="background-image: url('https://img.freepik.com/free-photo/old-paper-texture-background_118047-1365.jpg?size=626&ext=jpg');">
+	<div class="jumbotron jumbotron-fluid">
+		<div class="navigation">
+			<a class="button" href="/logout">
+			<img src="data:image/png;base64,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">
+		
+			<div class="logout" >LOGOUT</div>
+		
+			</a>
+		
+		</div>
+		<div class="container">
+			<div class="section">
+				<h2 class="text-center title-news">Trusted News Tribune</h2>
+				<div class="row">
+					<div class="col-lg-2"></div>
+					<div class="input-field col-lg-8">
+						<select id="selectedValue" onchange="redirect()">
+							<option value="1" >Times of India</option>
+							<option value="2" >New York Times</option>
+							<option value="3">Chicago Reader</option>
+							<option value="4" >Los Angels News</option>
+							<option value="5" >India Today</option>
+							<option value="6" >NBC News</option>
+							<option value="7" >NDTV</option>
+							<option value="8" >Republic TV</option>
+							<option value="9" >San Diego News</option>
+							<option value="10" selected>States Man</option>
+						  </select>
+					</div>
+					<div class="col-lg-2"></div>
+				</div>
+			
+			  </div>
+		</div>
+	  </div>
+
+<div class="row main-row">
+	{% for object in final_data %}
+	<div class="col-lg-4">
+		<!-- <div class="card">
+		  <div class="card-image">
+			<img src="{{object.image}}">
+			<span class="card-title">{{object.title}}</span>
+		  </div>
+		  <div class="card-content">
+			<p>{{object.shortSummary}}....</p>
+		  </div>
+		  <div class="card-action">
+			<a href="{{object.url}}" target="_blank">Read More</a>
+		  </div>
+		</div> -->
+
+		<div class="card"  >
+			<img class="card-img-top" src="{{object.image}}" alt="Card image cap" height="300">
+			<div class="card-body card-size" >
+			  <h5 class="card-title activator grey-text text-darken-4"><b>{{object.title}}</b></h5>
+			  <p class="card-text summary">{{object.shortSummary}}....</p>
+			  <a href="{{object.url}}" class="btn btn-primary" target="_blank">Read More</a>
+			</div>
+		  </div>
+	  </div>
+
+
+	{% endfor %}
+  </div>
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script>
+     document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, options);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('select').formSelect();
+  });
+       
+  </script>
+  </body>
+</html>
